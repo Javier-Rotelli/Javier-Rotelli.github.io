@@ -5,13 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header"
 import "../layout.css"
-import "@blueprintjs/core/lib/css/blueprint.css";
+import styles from "./layout.module.css"
+import "@blueprintjs/core/lib/css/blueprint.css"
+import useCanvasBackground from "../../Generativo/useCanvasBackground"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,20 +26,18 @@ const Layout = ({ children }) => {
     }
   `)
 
+  useCanvasBackground("miFondo")
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
+      <div className={styles.content}>
+        <main className={styles.main}>{children}</main>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
           © {new Date().getFullYear()}, Hecho con
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>

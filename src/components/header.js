@@ -5,9 +5,9 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#16a596`,
-      marginBottom: `1.45rem`,
-      boxShadow: `0 6px 31px -2px rgba(0, 0, 0, 0.5)`
+      background: `#464745`,
+      boxShadow: `0 6px 31px -2px rgba(0, 0, 0, 0.5)`,
+      height: `96`,
     }}
   >
     <div
@@ -15,13 +15,15 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `#0b3954`,
+            color: `#e1e3dd`,
             textDecoration: `none`,
           }}
         >
