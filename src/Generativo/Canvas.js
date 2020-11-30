@@ -9,8 +9,6 @@ const setupCanvas = canvas => {
   const size = canvas.width
   const dpr = window.devicePixelRatio
 
-  canvas.width = size * dpr
-  canvas.height = size * dpr
   context.scale(dpr, dpr)
   return { canvas, context, size }
 }
