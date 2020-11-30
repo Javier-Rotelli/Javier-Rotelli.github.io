@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
-import Layout from "../components/Layout/layout"
-import Canvas from "../Generativo/Canvas"
-import generadores from "../Generativo/generadores"
+import Layout from "../../components/Layout/layout"
+import Canvas from "../../Generativo/Canvas"
+import generadores from "../../Generativo/generadores"
 import { Tabs, Tab } from "@blueprintjs/core"
 
 const GenerativoPage = () => {
@@ -16,6 +16,7 @@ const GenerativoPage = () => {
         large={true}
         onChange={setCurrent}
         selectedTabId={current}
+        vertical={true}
       >
         {Object.entries(generadores).map(([key, generador], i) => (
           <Tab id={key} key={key} title={`${i + 1} - ${generador.nombre}`} />

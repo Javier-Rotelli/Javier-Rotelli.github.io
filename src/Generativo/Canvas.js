@@ -35,8 +35,8 @@ const Canvas = memo(({ onMount }) => {
       ref={canvasEl => {
         if (ct.current === null) ct.current = setupCanvas(canvasEl)
       }}
-      width={500}
-      height={500}
+      width={600}
+      height={600}
     />
   )
 })
