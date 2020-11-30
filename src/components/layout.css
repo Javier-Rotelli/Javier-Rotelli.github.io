@@ -17,6 +17,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html,
@@ -25,9 +28,7 @@ body,
 #gatsby-focus-wrapper {
   height: 100%;
 }
-body {
-  background: canvas(miFondo);
-}
+
 article,
 aside,
 details,

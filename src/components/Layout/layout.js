@@ -26,12 +26,12 @@ const Layout = ({ children }) => {
     }
   `)
 
-  useCanvasBackground("miFondo")
+  useCanvasBackground()
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className={styles.content}>
+      <div className={styles.content} id="content">
         <main className={styles.main}>{children}</main>
         <footer
           style={{
