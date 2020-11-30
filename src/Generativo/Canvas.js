@@ -18,7 +18,7 @@ const resetCanvas = ({ canvas }) => {
   canvas.width = 1
   canvas.width = w
 }
-const Canvas = memo(({ onMount }) => {
+const Canvas = memo(({ onMount, bump = "" }) => {
   const ct = useRef(null)
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Canvas = memo(({ onMount }) => {
       resetCanvas(ct.current)
       onMount(ct.current.context, ct.current.size)
     }
-  }, [onMount, ct])
+  }, [onMount, ct, bump])
 
   return (
     <canvas

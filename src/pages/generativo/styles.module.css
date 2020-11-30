@@ -3,6 +3,13 @@
     justify-content: space-between;
 }
 
-.container canvas {
+.canvas {
     margin: auto;
+    position: relative;
+}
+
+.canvas button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

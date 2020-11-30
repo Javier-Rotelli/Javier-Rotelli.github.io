@@ -13,7 +13,7 @@ import Header from "../header"
 import "../layout.css"
 import styles from "./layout.module.css"
 import "@blueprintjs/core/lib/css/blueprint.css"
-import useCanvasBackground from "../../Generativo/useCanvasBackground"
+import CanvasBackground from "../../Generativo/CanvasBackground"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,8 +26,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  useCanvasBackground()
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -38,11 +36,12 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Hecho con
+          Hecho con
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
+      <CanvasBackground />
     </>
   )
 }

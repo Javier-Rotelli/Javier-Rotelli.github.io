@@ -98,7 +98,7 @@ export const tres = {
     function draw(width, height) {
       context.beginPath()
       context.fillStyle =
-        "#" + colors[Math.round(Math.random() * colors.length)]
+        "#" + colors[Math.floor(Math.random() * colors.length)]
       context.fillRect(-width / 2, -height / 2, width, height)
       context.stroke()
     }
@@ -262,7 +262,7 @@ export const seis = {
       circles.push(newCircle)
       context.beginPath()
       context.fillStyle =
-        "#" + colors[Math.round(Math.random() * colors.length)]
+        "#" + colors[Math.floor(Math.random() * colors.length)]
       context.arc(newCircle.x, newCircle.y, newCircle.radius, 0, 2 * Math.PI)
       context.fill()
     }
@@ -310,7 +310,7 @@ export const siete = {
       context.beginPath()
       context.rect(x, y, width, height)
       context.fillStyle =
-        "#" + colors[Math.round(Math.random() * colors.length)]
+        "#" + colors[Math.floor(Math.random() * colors.length)]
       context.fill()
       if (steps >= 0) {
         const newSize = startSize * (steps / startSteps) + finalSize
