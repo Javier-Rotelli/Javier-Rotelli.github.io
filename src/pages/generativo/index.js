@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/layout"
 import Canvas from "../../Generativo/Canvas"
 import generadores from "../../Generativo/generadores"
 import { Tabs, Tab, Button } from "@blueprintjs/core"
-import styles from "./styles.module.css"
+import { container, canvas } from "./styles.module.css"
 
 const GenerativoPage = () => {
   const [current, setCurrent] = useState("uno")
@@ -12,7 +12,7 @@ const GenerativoPage = () => {
 
   return (
     <Layout>
-      <div className={styles.container}>
+      <div className={container}>
         <Tabs
           animate={true}
           id="navbar"
@@ -25,7 +25,7 @@ const GenerativoPage = () => {
             <Tab id={key} key={key} title={`${i + 1} - ${generador.nombre}`} />
           ))}
         </Tabs>
-        <div className={styles.canvas}>
+        <div className={canvas}>
           <Canvas onMount={generadores[current].render} bump={bump} />
           <Button icon="refresh" onClick={() => setBump(Date.now)} />
         </div>

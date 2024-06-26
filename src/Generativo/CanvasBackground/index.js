@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Button, Popover } from "@blueprintjs/core"
 
-import styles from "./styles.module.css"
+import * as styles from "./styles.module.css"
 import useCanvasBackground from "../useCanvasBackground"
 
 const CanvasBackground = () => {

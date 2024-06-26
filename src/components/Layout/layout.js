@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header"
 import "../layout.css"
-import styles from "./layout.module.css"
+import * as styles from "./layout.module.css"
 import "@blueprintjs/core/lib/css/blueprint.css"
 import CanvasBackground from "../../Generativo/CanvasBackground"
 
